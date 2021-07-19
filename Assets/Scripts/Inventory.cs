@@ -10,7 +10,6 @@ public class Inventory : MonoBehaviour
 
     public static Inventory Instance { get { return _instance; } }
 
-
     private void Awake()
     {
         if (_instance != null && _instance != this)

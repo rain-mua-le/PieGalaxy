@@ -15,7 +15,6 @@ public class Stats : MonoBehaviour
 
     public static Stats Instance { get { return _instance; } }
 
-
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -24,5 +23,6 @@ public class Stats : MonoBehaviour
         } else {
             _instance = this;
         }
+        DontDestroyOnLoad(this);
     }
 }

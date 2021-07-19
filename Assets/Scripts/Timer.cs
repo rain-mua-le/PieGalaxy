@@ -10,7 +10,6 @@ public class Timer : MonoBehaviour
 
     public static Timer Instance { get { return _instance; } }
 
-
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -19,5 +18,6 @@ public class Timer : MonoBehaviour
         } else {
             _instance = this;
         }
+        DontDestroyOnLoad(this);
     }
 }
