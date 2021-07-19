@@ -11,6 +11,7 @@ public class MainCharacter : MonoBehaviour
     public int attack = 5;
     public int defense = 5;
     public int mana = 30;
+    public int money = 100;
     public float crit;
     private Rigidbody2D rgb;
 
