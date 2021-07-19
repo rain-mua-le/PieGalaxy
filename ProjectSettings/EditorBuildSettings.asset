@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ChoosePlanet.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/AquaLand.unity
+    guid: 465c016f4329541a7b2d4d18d665cd80
+  - enabled: 1
+    path: Assets/Scenes/DairyLand.unity
+    guid: 4fff1171df873cfb28c2cda00ed2538b
+  - enabled: 1
+    path: Assets/Scenes/FruityTooty.unity
+    guid: e05d066f4f674e4f1b2db9cac715128b
+  - enabled: 1
+    path: Assets/Scenes/VeggieWorld.unity
+    guid: 3e9cdc6a9180da03984421c03f306934
+  - enabled: 1
+    path: Assets/Scenes/GrainWorld.unity
+    guid: a00a34a0b748a62c0b33e27a08fdc030
+  - enabled: 1
+    path: Assets/Scenes/MeatyPlanet.unity
+    guid: 066571e148d327cb8bae0aaec6070dd9
+  - enabled: 1
+    path: Assets/Scenes/SeasoningPlanet.unity
+    guid: 80b00057c2b2545c38d7a99c78734144
   m_configObjects: {}
