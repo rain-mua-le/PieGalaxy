@@ -11,12 +11,35 @@ public class Water : MonoBehaviour
     public Button yes;
     public Button no;
     public Button cont;
+    public int cups = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        yes.onClick.AddListener(() => {
-            
+        yes.onClick.AddListener(() => 
+        {
+            canvas.SetActive(false);
+            canvas2.SetActive(true);
+        });
+        no.onClick.AddListener(() => 
+        {
+            canvas.SetActive(false);
+            MainCharacter main = mc.GetComponent<MainCharacter>();
+            main.freeze = false;
+        });
+        cont.onClick.AddListener(() =>
+        {
+            canvas2.SetActive(false);
+            if (!Inventory.Instance.inventory.ContainsKey("Water"))
+            {
+                Inventory.Instance.inventory.Add("Water", cups);
+            }
+            else
+            {
+                Inventory.Instance.inventory["Water"] += cups;
+            }
+            MainCharacter main = mc.GetComponent<MainCharacter>();
+            main.freeze = false;
         });
     }
 

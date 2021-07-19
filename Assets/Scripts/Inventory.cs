@@ -19,5 +19,11 @@ public class Inventory : MonoBehaviour
         } else {
             _instance = this;
         }
+        DontDestroyOnLoad(this);
+    }
+
+    void Start()
+    {
+        inventory = new Dictionary<string, int>();
     }
 }
