@@ -13,6 +13,7 @@ public class MainCharacter : MonoBehaviour
     public int mana = 30;
     public int money = 100;
     public float crit;
+    public bool freeze = false;
     private Rigidbody2D rgb;
 
     void Start()
@@ -27,11 +28,14 @@ public class MainCharacter : MonoBehaviour
 
     void FixedUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        Vector2 pos = rgb.position;
-        pos.x += speed * horizontal * Time.deltaTime;
-        pos.y += speed * vertical * Time.deltaTime;
-        rgb.MovePosition(pos);
+        if (!freeze)
+        {
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+            Vector2 pos = rgb.position;
+            pos.x += speed * horizontal * Time.deltaTime;
+            pos.y += speed * vertical * Time.deltaTime;
+            rgb.MovePosition(pos);
+        }
     }
 }
