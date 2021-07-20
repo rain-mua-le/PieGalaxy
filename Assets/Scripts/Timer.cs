@@ -15,7 +15,8 @@ public class Timer : MonoBehaviour
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
-        } else {
+        } 
+        else {
             _instance = this;
         }
         DontDestroyOnLoad(this);

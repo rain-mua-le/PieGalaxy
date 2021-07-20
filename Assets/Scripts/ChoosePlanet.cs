@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,12 @@ public class ChoosePlanet : MonoBehaviour
         foreach (Button b in buttons) {
             string txt = b.GetComponentInChildren<Text>().text;
             string sceneName = txt.Substring(0, txt.IndexOf('-'));
-            b.onClick.AddListener(() => ChangeScene(sceneName));
+            int coins = Int32.Parse(txt.Substring(txt.IndexOf('-') + 1, txt.IndexOf(" coins") - txt.IndexOf('-') - 1));
+            b.onClick.AddListener(() => 
+            {
+                Stats.Instance.money -= coins;
+                ChangeScene(sceneName);
+            });
         }   
     }
 

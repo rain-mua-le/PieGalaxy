@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    public int level;
-    public int health;
-    public int attack;
-    public int defense;
-    public int mana;
-    public int money;
+    public int level = 1;
+    public int health = 60;
+    public int attack = 5;
+    public int defense = 5;
+    public int mana = 30;
+    public int money = 100;
 
     private static Stats _instance;
 
@@ -20,7 +20,8 @@ public class Stats : MonoBehaviour
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
-        } else {
+        } 
+        else {
             _instance = this;
         }
         DontDestroyOnLoad(this);
