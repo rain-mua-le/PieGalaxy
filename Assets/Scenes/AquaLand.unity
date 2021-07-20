@@ -292,6 +292,7 @@ MonoBehaviour:
   yes: {fileID: 331865713}
   no: {fileID: 259606282}
   cont: {fileID: 686647279}
+  cups: 1
 --- !u!1 &95031577
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +767,7 @@ GameObject:
   - component: {fileID: 686647281}
   - component: {fileID: 686647280}
   - component: {fileID: 686647279}
+  - component: {fileID: 686647282}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -875,6 +877,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686647277}
   m_CullTransparentMesh: 1
+--- !u!114 &686647282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686647277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0772b74715346a7eb163f47b7d60eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  down: 0
 --- !u!1 &721338294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1748,7 @@ MonoBehaviour:
   yes: {fileID: 331865713}
   no: {fileID: 259606282}
   cont: {fileID: 686647279}
+  cups: 1
 --- !u!1 &1831916600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +1917,7 @@ MonoBehaviour:
   yes: {fileID: 331865713}
   no: {fileID: 259606282}
   cont: {fileID: 686647279}
+  cups: 1
 --- !u!1 &1889164086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,3 +2361,4 @@ MonoBehaviour:
   yes: {fileID: 331865713}
   no: {fileID: 259606282}
   cont: {fileID: 686647279}
+  cups: 1

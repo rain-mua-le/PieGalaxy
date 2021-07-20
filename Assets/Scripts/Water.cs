@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Water : MonoBehaviour
 {
@@ -27,20 +28,6 @@ public class Water : MonoBehaviour
             MainCharacter main = mc.GetComponent<MainCharacter>();
             main.freeze = false;
         });
-        cont.onClick.AddListener(() =>
-        {
-            canvas2.SetActive(false);
-            if (!Inventory.Instance.inventory.ContainsKey("Water"))
-            {
-                Inventory.Instance.inventory.Add("Water", cups);
-            }
-            else
-            {
-                Inventory.Instance.inventory["Water"] += cups;
-            }
-            MainCharacter main = mc.GetComponent<MainCharacter>();
-            main.freeze = false;
-        });
     }
 
     // Update is called once per frame
@@ -57,5 +44,29 @@ public class Water : MonoBehaviour
             main.freeze = true;
             canvas.SetActive(true);
         }
+    }
+
+    void OnMouseDown()
+    {
+        if (cont.gameObject.GetComponent<Down>().down)
+        {
+            cont.onClick.AddListener(CollectWater);
+        }
+    }
+
+    void CollectWater()
+    {
+        canvas2.SetActive(false);
+        if (!Inventory.Instance.inventory.ContainsKey("Water"))
+        {
+            Inventory.Instance.inventory.Add("Water", cups);
+        }
+        else
+        {
+            Inventory.Instance.inventory["Water"] += cups;
+        }
+        Timer.Instance.time += 5;
+        MainCharacter main = mc.GetComponent<MainCharacter>();
+        main.freeze = false;
     }
 }

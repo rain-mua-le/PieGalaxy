@@ -18,6 +18,7 @@ public class ChoosePlanet : MonoBehaviour
             b.onClick.AddListener(() => 
             {
                 Stats.Instance.money -= coins;
+                Timer.Instance.time += 5;
                 ChangeScene(sceneName);
             });
         }   
