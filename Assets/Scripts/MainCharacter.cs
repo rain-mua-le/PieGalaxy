@@ -6,13 +6,6 @@ public class MainCharacter : MonoBehaviour
 {
     // Start is called before the first frame update
     public const float speed = 3.0f;
-    public int level = 1;
-    public int health = 60;
-    public int attack = 5;
-    public int defense = 5;
-    public int mana = 30;
-    public int money = 100;
-    public float crit;
     public bool freeze = false;
     private Rigidbody2D rgb;
 
