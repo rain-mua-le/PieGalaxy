@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numEnemies: 50
-  distance: 100
+  distance: 200
   mainCharacter: {fileID: 616208990}
   sprites:
   - {fileID: -9095717837082945937, guid: 64163589621e89910a5a7b51dd0f9e7d, type: 3}
@@ -404,6 +404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781522531313615580, guid: 4e65382e2d440633da8a102825f44fbb,
+        type: 3}
+      propertyPath: speed
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 2781522531313615582, guid: 4e65382e2d440633da8a102825f44fbb,
         type: 3}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainCharacter : MonoBehaviour
 {
     // Start is called before the first frame update
-    public const float speed = 3.0f;
+    public float speed = 3.0f;
     public bool freeze = false;
     private Rigidbody2D rgb;
 

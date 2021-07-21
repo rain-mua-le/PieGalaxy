@@ -18,7 +18,12 @@ public class EnemySpawner : MonoBehaviour
             int num = Random.Range(0, sprites.Count);
             GameObject enemy = new GameObject("Enemy" + i);
             Vector2 pos = new Vector2(Random.Range(mainCharacter.GetComponent<Rigidbody2D>().position.x - distance, mainCharacter.GetComponent<Rigidbody2D>().position.x + distance), Random.Range(mainCharacter.GetComponent<Rigidbody2D>().position.x - distance, mainCharacter.GetComponent<Rigidbody2D>().position.x + distance));
+            while (pos.x > mainCharacter.GetComponent<Rigidbody2D>().position.x - 15 && pos.x < mainCharacter.GetComponent<Rigidbody2D>().position.x + 15 && pos.y > mainCharacter.GetComponent<Rigidbody2D>().position.y - 15 && pos.y < mainCharacter.GetComponent<Rigidbody2D>().position.y + 15) 
+            {
+                pos = new Vector2(Random.Range(mainCharacter.GetComponent<Rigidbody2D>().position.x - distance, mainCharacter.GetComponent<Rigidbody2D>().position.x + distance), Random.Range(mainCharacter.GetComponent<Rigidbody2D>().position.x - distance, mainCharacter.GetComponent<Rigidbody2D>().position.x + distance));
+            }
             enemy.AddComponent<Rigidbody2D>().MovePosition(pos);
+            enemy.GetComponent<Rigidbody2D>().gravityScale = 0;
             enemy.AddComponent<Enemy>().mainCharacter = mainCharacter;
             enemy.AddComponent<SpriteRenderer>().sprite = sprites[num];
             enemy.tag = "Enemy";
