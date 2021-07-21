@@ -124,6 +124,70 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &42808695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42808697}
+  - component: {fileID: 42808696}
+  m_Layer: 0
+  m_Name: EnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &42808696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42808695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3a9a9d459f272cdba6e85cbe2959ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numEnemies: 50
+  distance: 100
+  mainCharacter: {fileID: 616208990}
+  sprites:
+  - {fileID: -9095717837082945937, guid: 64163589621e89910a5a7b51dd0f9e7d, type: 3}
+  - {fileID: -2413806693520163455, guid: d3b60d2edabbf1c56801a6525e0921b1, type: 3}
+  names:
+  - Rye Flour
+  - Regular Flour
+--- !u!4 &42808697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42808695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616208990 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2781522531313615580, guid: 4e65382e2d440633da8a102825f44fbb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1380370189}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62dce56c4c79b5cbb248b1a3687b819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &632049110
 GameObject:
   m_ObjectHideFlags: 0

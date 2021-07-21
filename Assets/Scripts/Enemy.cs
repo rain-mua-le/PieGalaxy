@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public MainCharacter mainCharacter;
     public int level;
     public int health;
     public int attack;
@@ -34,5 +35,14 @@ public class Enemy : MonoBehaviour
         time += Time.deltaTime;
         Vector2 pos = new Vector2(startPos.x + rand1 * Mathf.Sin(time * rand2), startPos.y + rand3 * Mathf.Sin(time * rand4));
         rgbd.MovePosition(pos);
+        /*
+        RaycastHit2D rch = Physics2D.Raycast(transform.position, mainCharacter.transform.position - transform.position, 10f);
+        if (rch.collider != null && rch.collider.gameObject.tag == "Player")
+        {
+            Vector2 position = Vector2.Lerp(transform.position, mainCharacter.transform.position, 0.1f);
+            rgbd.MovePosition(position);
+            startPos = position;
+        }
+        */
     }
 }
