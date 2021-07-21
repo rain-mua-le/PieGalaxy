@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numEnemies: 50
-  distance: 125
+  distance: 100
   mainCharacter: {fileID: 616208990}
   sprites:
   - {fileID: -9095717837082945937, guid: 64163589621e89910a5a7b51dd0f9e7d, type: 3}

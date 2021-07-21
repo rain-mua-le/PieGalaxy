@@ -48,7 +48,7 @@ public class Water : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (cont.gameObject.GetComponent<Down>().down)
+        if (cont.gameObject.GetComponent<Down>().over)
         {
             cont.onClick.AddListener(CollectWater);
         }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Down : MonoBehaviour, IPointerDownHandler 
+public class Down : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public bool down;
+    public bool over;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +18,13 @@ public class Down : MonoBehaviour, IPointerDownHandler
         
     }
 
-    public void OnPointerDown(PointerEventData data)
+    public void OnPointerEnter(PointerEventData data)
     {
-        down = true;
+        over = true;
+    }
+
+    public void OnPointerExit(PointerEventData data)
+    {
+        over = false;
     }
 }
