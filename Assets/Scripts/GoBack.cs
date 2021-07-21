@@ -29,6 +29,9 @@ public class GoBack : MonoBehaviour
 
     void OnDestroy()
     {
-        backButton.SetActive(false);
+        if (backButton != null) 
+        {
+            backButton.SetActive(false);   
+        }
     }
 }
