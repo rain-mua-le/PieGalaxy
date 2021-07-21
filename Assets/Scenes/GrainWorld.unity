@@ -156,10 +156,9 @@ MonoBehaviour:
   numEnemies: 50
   distance: 100
   mainCharacter: {fileID: 616208990}
-  enemies: []
-  names:
-  - Rye Flour
-  - Regular Flour
+  enemies:
+  - {fileID: 3414523308975112493, guid: 57abd76f06797cb5cb4c4b0f01f99a58, type: 3}
+  - {fileID: 7797508141395606761, guid: bf501331fbf719b2d83c763d300c0744, type: 3}
 --- !u!4 &42808697
 Transform:
   m_ObjectHideFlags: 0

@@ -156,7 +156,8 @@ MonoBehaviour:
   numEnemies: 50
   distance: 100
   mainCharacter: {fileID: 1034200779}
-  enemies: []
+  enemies:
+  - {fileID: 9145310692534368852, guid: 78047cd58284350d58b1f6f159c5f738, type: 3}
 --- !u!4 &164585309
 Transform:
   m_ObjectHideFlags: 0
