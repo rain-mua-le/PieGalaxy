@@ -156,9 +156,7 @@ MonoBehaviour:
   numEnemies: 50
   distance: 100
   mainCharacter: {fileID: 616208990}
-  sprites:
-  - {fileID: -9095717837082945937, guid: 64163589621e89910a5a7b51dd0f9e7d, type: 3}
-  - {fileID: -2413806693520163455, guid: d3b60d2edabbf1c56801a6525e0921b1, type: 3}
+  enemies: []
   names:
   - Rye Flour
   - Regular Flour
