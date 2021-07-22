@@ -11,6 +11,7 @@ public class Stats : MonoBehaviour
     public int defense = 5;
     public int mana = 30;
     public int money = 100;
+    public GameObject enemyToFight;
 
     private static Stats _instance;
 

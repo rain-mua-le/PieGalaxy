@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainCharacter : MonoBehaviour
 {
@@ -29,6 +30,15 @@ public class MainCharacter : MonoBehaviour
             pos.x += speed * horizontal * Time.deltaTime;
             pos.y += speed * vertical * Time.deltaTime;
             rgb.MovePosition(pos);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag.Equals("Enemy"))
+        {
+            Stats.Instance.enemyToFight = other.gameObject;
+            SceneManager.LoadScene("Battle");
         }
     }
 }

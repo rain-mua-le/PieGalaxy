@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public int health;
     public int attack;
     public int exp;
+    public int gain;
+    public string unit;
     public bool state = false; //0- In area, 1- In fight
     private float time = 0.0f;
     private Rigidbody2D rgbd;
@@ -32,15 +34,22 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        Vector2 pos = new Vector2(startPos.x + rand1 * Mathf.Sin(time * rand2), startPos.y + rand3 * Mathf.Sin(time * rand4));
-        rgbd.MovePosition(pos);
-        RaycastHit2D rch = Physics2D.Raycast(transform.position, mainCharacter.transform.position - transform.position, 10f);
-        if (rch.collider != null && rch.collider.gameObject.tag == "Player")
+        if (!state)
         {
-            Vector2 position = Vector2.Lerp(transform.position, mainCharacter.transform.position, 0.05f);
-            rgbd.MovePosition(position);
-            startPos = position;
+            time += Time.deltaTime;
+            Vector2 pos = new Vector2(startPos.x + rand1 * Mathf.Sin(time * rand2), startPos.y + rand3 * Mathf.Sin(time * rand4));
+            rgbd.MovePosition(pos);
+            RaycastHit2D rch = Physics2D.Raycast(transform.position, mainCharacter.transform.position - transform.position, 10f);
+            if (rch.collider != null && rch.collider.gameObject.tag.Equals("Player"))
+            {
+                Vector2 position = Vector2.Lerp(transform.position, mainCharacter.transform.position, 0.05f);
+                rgbd.MovePosition(position);
+                startPos = position;
+            }
+        }
+        else
+        {
+
         }
     }
 }
