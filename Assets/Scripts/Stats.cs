@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
+    public Sprite sprite;
     public int level = 1;
     public int exp = 0;
     public int health = 60;

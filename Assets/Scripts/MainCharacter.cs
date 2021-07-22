@@ -13,6 +13,7 @@ public class MainCharacter : MonoBehaviour
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
+        Stats.Instance.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
     void Update()

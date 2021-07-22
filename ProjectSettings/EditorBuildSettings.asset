@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SeasoningPlanet.unity
     guid: 80b00057c2b2545c38d7a99c78734144
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: 3e6c8b3508b48958f8243896381f2251
   m_configObjects: {}
