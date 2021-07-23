@@ -12,7 +12,14 @@ public class Stats : MonoBehaviour
     public int defense = 5;
     public int mana = 30;
     public int money = 100;
-    public GameObject enemyToFight;
+    public Sprite enemySprite;
+    public int enemyLevel;
+    public string enemyName;
+    public int enemyHealth;
+    public int enemyAttack;
+    public int enemyExp;
+    public int gain;
+    public string unit;
 
     private static Stats _instance;
 

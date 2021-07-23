@@ -38,7 +38,9 @@ public class MainCharacter : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Enemy"))
         {
-            Stats.Instance.enemyToFight = other.gameObject;
+            Stats.Instance.enemySprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;
+            Stats.Instance.enemyLevel = other.gameObject.GetComponent<Enemy>().level;
+            Stats.Instance.enemyName = other.gameObject.GetComponentInChildren<TextMesh>().text;
             SceneManager.LoadScene("Battle");
         }
     }

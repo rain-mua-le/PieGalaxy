@@ -10,24 +10,11 @@ public class EnemySpawner : MonoBehaviour
     public int maxLevel;
     public MainCharacter mainCharacter;
     public List<GameObject> enemies;
-    public Dictionary<string, int> startingGain = new Dictionary<string, int>()
-    {
-        ["Rye Flour"] = 1,
-        ["Regular Flour"] = 1,
-        ["Salt"] = 2,
-        ["Butter"] = 1
-    };
-    public Dictionary<string, string> units = new Dictionary<string, string>()
-    {
-        ["Rye Flour"] = "cup(s)",
-        ["Regular Flour"] = "cup(s)",
-        ["Salt"] = "tsp.",
-        ["Butter"] = "stick(s)"
-    };
 
     // Start is called before the first frame update
     void Start()
     {
+        mainCharacter.gameObject.SetActive(false);
         for (int i = 1; i <= numEnemies; i++)
         {
             int num = Random.Range(0, enemies.Count);
@@ -41,12 +28,8 @@ public class EnemySpawner : MonoBehaviour
             enemy.GetComponent<Enemy>().mainCharacter = mainCharacter;
             int level = Random.Range(minLevel, maxLevel + 1);
             enemy.GetComponent<Enemy>().level = level;
-            enemy.GetComponent<Enemy>().health = level * 10 + 10;
-            enemy.GetComponent<Enemy>().attack = level / 3 * 5;
-            enemy.GetComponent<Enemy>().exp = level * 25;
-            enemy.GetComponent<Enemy>().gain = level * startingGain[enemy.GetComponentInChildren<TextMesh>().text];
-            enemy.GetComponent<Enemy>().unit = units[enemy.GetComponentInChildren<TextMesh>().text];
         }
+        mainCharacter.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
