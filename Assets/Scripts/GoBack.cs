@@ -12,6 +12,7 @@ public class GoBack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HUD.Instance.gameObject.SetActive(true);
         backButton = HUD.Instance.gameObject.transform.Find("GoBack").gameObject;
         backButton.SetActive(true);
         backButton.GetComponent<Button>().onClick.AddListener(() => 

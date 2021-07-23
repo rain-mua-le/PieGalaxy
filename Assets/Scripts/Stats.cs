@@ -41,6 +41,7 @@ public class Stats : MonoBehaviour
     public int enemyExp;
     public int gain;
     public string unit;
+    public string lastSceneAt;
 
     private static Stats _instance;
 
