@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Battle : MonoBehaviour
 {
+    public Canvas select;
+    public Canvas skillsSelect;
     private Dictionary<string, int> startingGain = new Dictionary<string, int>()
     {
         ["Rye Flour"] = 1,
@@ -34,6 +36,7 @@ public class Battle : MonoBehaviour
         Stats.Instance.gain = Stats.Instance.enemyLevel / 4 * startingGain[Stats.Instance.enemyName];
         Stats.Instance.unit = units[Stats.Instance.enemyName];
         HUD.Instance.gameObject.SetActive(false);
+        skillsSelect.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
