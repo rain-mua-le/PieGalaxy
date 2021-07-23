@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
+    public readonly struct Skill
+    {
+        readonly string name;
+        readonly string description;
+        readonly int healthAddition;
+        readonly int attackAddition;
+        readonly int manaCost;
+        public Skill(string n, string d, int h, int a, int m)
+        {
+            this.name = n;
+            this.description = d;
+            this.healthAddition = h;
+            this.attackAddition = a;
+            this.manaCost = m;
+        }
+    }
     public Sprite sprite;
     public int level = 1;
     public int exp = 0;
@@ -12,6 +28,11 @@ public class Stats : MonoBehaviour
     public int defense = 5;
     public int mana = 30;
     public int money = 100;
+    public List<Skill> skills = new List<Skill>()
+    {
+        new Skill("Heal", "Regain 10 HP. Costs 10 mana.", 10, 0, 10),
+        new Skill("Pie Smack", "Deals 10 damages to enemy. Costs 10 HP.", 10, 0, 10)
+    };
     public Sprite enemySprite;
     public int enemyLevel;
     public string enemyName;
