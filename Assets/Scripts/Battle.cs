@@ -31,7 +31,7 @@ public class Battle : MonoBehaviour
         Stats.Instance.enemyHealth = Stats.Instance.enemyLevel * 10 + 10;
         Stats.Instance.enemyAttack = Stats.Instance.enemyHealth / 3 * 5;
         Stats.Instance.enemyExp = Stats.Instance.level * 25;
-        Stats.Instance.gain = Stats.Instance.enemyLevel * startingGain[Stats.Instance.enemyName];
+        Stats.Instance.gain = Stats.Instance.enemyLevel / 4 * startingGain[Stats.Instance.enemyName];
         Stats.Instance.unit = units[Stats.Instance.enemyName];
         HUD.Instance.gameObject.SetActive(false);
     }
